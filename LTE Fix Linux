@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo 16383 | sudo tee /sys/bus/usb/devices/2-3/2-3:1.0/net/wwp0s20f0u3/cdc_ncm/rx_max
+echo 16383 | sudo tee /sys/bus/usb/devices/2-3/2-3:1.0/net/wwp0s20f0u3/cdc_ncm/tx_max
+
+echo 16384 | sudo tee /sys/bus/usb/devices/2-3/2-3:1.0/net/wwp0s20f0u3/cdc_ncm/rx_max
+echo 16384 | sudo tee /sys/bus/usb/devices/2-3/2-3:1.0/net/wwp0s20f0u3/cdc_ncm/tx_max
+
+systemctl restart ModemManager
